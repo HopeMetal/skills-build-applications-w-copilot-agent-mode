@@ -13,7 +13,7 @@ export function getItems(payload) {
 }
 
 export async function fetchCollection(component) {
-  const response = await fetch(`${API_BASE_URL}/${component}`)
+  const response = await fetch(`${API_BASE_URL}${component}`)
   if (!response.ok) {
     throw new Error(`Unable to load ${component}: ${response.status}`)
   }

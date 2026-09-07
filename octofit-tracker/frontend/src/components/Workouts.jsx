@@ -2,7 +2,7 @@ import CollectionState from './CollectionState'
 import { useCollection } from './useCollection'
 
 export default function Workouts() {
-  const { items, loading, error } = useCollection('api/workouts/')
+  const { items, loading, error } = useCollection('/api/workouts/')
 
   return (
     <section>
