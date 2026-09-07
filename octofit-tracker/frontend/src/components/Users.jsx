@@ -2,7 +2,7 @@ import CollectionState from './CollectionState'
 import { useCollection } from './useCollection'
 
 export default function Users() {
-  const { items, loading, error } = useCollection('users')
+  const { items, loading, error } = useCollection('api/users')
 
   return (
     <section>

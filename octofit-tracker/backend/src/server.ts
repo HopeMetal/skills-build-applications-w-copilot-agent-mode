@@ -16,6 +16,17 @@ const baseUrl = codespaceName
 
 app.use(express.json());
 
+app.use((_request, response, next) => {
+  response.setHeader('Access-Control-Allow-Origin', '*');
+  response.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (_request.method === 'OPTIONS') {
+    response.sendStatus(204);
+    return;
+  }
+  next();
+});
+
 app.get('/api/health', (_request, response) => {
   response.json({ status: 'ok', baseUrl });
 });

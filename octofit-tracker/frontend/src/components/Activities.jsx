@@ -2,7 +2,7 @@ import CollectionState from './CollectionState'
 import { useCollection } from './useCollection'
 
 export default function Activities() {
-  const { items, loading, error } = useCollection('activities')
+  const { items, loading, error } = useCollection('api/activities')
 
   return (
     <section>
