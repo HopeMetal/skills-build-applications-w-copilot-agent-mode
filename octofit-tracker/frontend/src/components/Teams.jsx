@@ -2,7 +2,7 @@ import CollectionState from './CollectionState'
 import { useCollection } from './useCollection'
 
 export default function Teams() {
-  const { items, loading, error } = useCollection('api/teams')
+  const { items, loading, error } = useCollection('api/teams/')
 
   return (
     <section>

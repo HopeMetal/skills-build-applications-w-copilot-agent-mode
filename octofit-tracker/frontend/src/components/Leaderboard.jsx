@@ -2,7 +2,7 @@ import CollectionState from './CollectionState'
 import { useCollection } from './useCollection'
 
 export default function Leaderboard() {
-  const { items, loading, error } = useCollection('api/leaderboard')
+  const { items, loading, error } = useCollection('api/leaderboard/')
 
   return (
     <section>
